@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import { RouteListPage } from './components/routes/RouteListPage'
+import RouteListPage from './components/routes/RouteListPage'
 
 class App extends Component {
   render() {

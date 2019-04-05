@@ -1,22 +1,46 @@
 import React, { Component, Fragment } from 'react';
-import { Route } from 'react-router-dom'
+import { Route, Redirect, Switch } from 'react-router-dom'
+import {connect} from "react-redux";
 
 import ArticleList from '../ArticleList';
-import { ArticlePage } from './ArticlePage';
+import ArticleContainer from './ArticleContainer';
+import { loadAllArticles } from '../../actions';
 
-export  class RouteListPage extends Component  {
+class RouteListPage extends Component  {
 
-    getArticle = ({ match }) => {
-        console.log('---', 'article match: ', match)
-        return <ArticlePage id={match.params.id} isOpen key={match.params.id} />
-    }
+    getArticle = ( { match } ) => {
+        return !this.props.loaded ?
+            <h1>Loading...</h1> :
+            <ArticleContainer id = { match.params.id } />
+    };
+
+    getArticleList = () => {
+        return !this.props.loaded ?
+            <h1>Loading...</h1> :
+            <ArticleList />
+    };
 
     render() {
         return (
-            <Fragment>
-                <Route exact path='/' component={ArticleList}/>
-                <Route path='/article/:id' render={this.getArticle}/>
-            </Fragment>
+            <Switch>
+                <Redirect from="/" to="/articles" exact />
+                <Route exact path='/articles' render = { this.getArticleList } />
+                <Route exact path='/articles/:id' render = { this.getArticle } />
+            </Switch>
         );
     }
+
+    componentDidMount() {
+        !this.props.loaded && this.props.loadAllArticles()
+    }
+};
+
+function mapStateToProps(state) {
+    return {
+        loaded: state.articles.loaded
+    }
 }
+
+export default connect(
+    mapStateToProps,
+    { loadAllArticles })(RouteListPage)
