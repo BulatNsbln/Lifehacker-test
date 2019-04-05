@@ -3,7 +3,7 @@ import {
     START,
     SUCCESS,
 } from "../constants";
-import getObject from './utils';
+import arrToObject from './utils';
 
 export default (state = {}, action) => {
     const { type, response } = action;
@@ -12,14 +12,13 @@ export default (state = {}, action) => {
         case LOAD_ALL_ARTICLES + START:
             return {
                 ...state,
-                loading: true
+                loaded: false
             };
 
         case LOAD_ALL_ARTICLES + SUCCESS:
             return {
                 ...state,
-                'articlesList': getObject(response.data),
-                'loading': false,
+                'articlesList': arrToObject(response.data),
                 'loaded': true
             };
 

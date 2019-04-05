@@ -1,24 +1,10 @@
-import React, { Component, Fragment } from 'react';
-import {Link} from "react-router-dom";
+import React, { Fragment } from 'react';
 
-class Article extends Component {
-    createMarkup = (text) => {
-        // конвертирование текста в html
-        return {__html: text };
-    };
-
-    render() {
-        const {article} = this.props;
-        const title = article.title.rendered;
-        const text = article.content.rendered;
-
+export default function Article( { title, text, createMarkup } ) {
         return (
             <Fragment>
                 <h1> { title } </h1>
-                <div dangerouslySetInnerHTML = { this.createMarkup(text) } />
+                <div dangerouslySetInnerHTML = { createMarkup(text) } />
             </Fragment>
         )
-    }
 };
-
-export default Article;

@@ -1,22 +1,24 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom'
 import {connect} from "react-redux";
 
 import ArticleList from '../ArticleList';
-import ArticleContainer from './ArticleContainer';
+import ArticleContainer from '../ArticleContainer';
+import Loader from '../../components/Loader'
 import { loadAllArticles } from '../../actions';
+
 
 class RouteListPage extends Component  {
 
     getArticle = ( { match } ) => {
         return !this.props.loaded ?
-            <h1>Loading...</h1> :
+            <Loader/> :
             <ArticleContainer id = { match.params.id } />
     };
 
     getArticleList = () => {
         return !this.props.loaded ?
-            <h1>Loading...</h1> :
+            <Loader/> :
             <ArticleList />
     };
 
@@ -39,8 +41,8 @@ function mapStateToProps(state) {
     return {
         loaded: state.articles.loaded
     }
-}
+};
 
 export default connect(
     mapStateToProps,
-    { loadAllArticles })(RouteListPage)
+    { loadAllArticles })(RouteListPage);

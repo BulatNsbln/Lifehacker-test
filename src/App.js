@@ -1,15 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 
-import RouteListPage from './components/routes/RouteListPage'
+import RouteListPage from './containers/routes/RouteListPage'
 
-class App extends Component {
-  render() {
+export default function() {
     return (
-      <Fragment>
         <RouteListPage/>
-      </Fragment>
     );
-  }
-}
+};
 
-export default App;
