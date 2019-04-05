@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Route } from 'react-router-dom'
 
-import { ArticleList } from '../ArticleList';
-import {ArticlePage} from './ArticlePage';
+import ArticleList from '../ArticleList';
+import { ArticlePage } from './ArticlePage';
 
 export  class RouteListPage extends Component  {
 

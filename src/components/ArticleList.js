@@ -1,16 +1,20 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
 
+import { loadAllArticles } from '../actions';
 
 const apiEndpoint = 'https://lifehacker.ru/api/wp/v2/posts';
 
- export class ArticleList extends Component {
+class ArticleList extends Component {
     state = {
         posts: []
     };
 
    componentDidMount() {
+       this.props.loadAllArticles();
+
        axios.get(apiEndpoint)
            .then( response => {
                console.log(response);
@@ -31,14 +35,12 @@ const apiEndpoint = 'https://lifehacker.ru/api/wp/v2/posts';
                         console.log(article.id, 22222)
                         let id = article.id;
                         return (
-                            <Fragment>
-                                <img src={article.cat_cover.sizes.mobile} alt='лого'></img>
-                                <li>
+                                <li key = {id} >
+                                    <img src={article.cat_cover.sizes.mobile} alt='лого' />
                                     <Link to={`/article/${id}`} >
                                         { article.title.rendered }
                                     </Link>
                                 </li>
-                            </Fragment>
                         )
                     })}
                 </ul>
@@ -47,3 +49,4 @@ const apiEndpoint = 'https://lifehacker.ru/api/wp/v2/posts';
     };
 }
 
+export default connect(null, {loadAllArticles})(ArticleList)
