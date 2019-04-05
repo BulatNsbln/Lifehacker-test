@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 
-import { ArticleList } from './components/ArticleList'
+import { RouteListPage } from './components/routes/RouteListPage'
 
 class App extends Component {
   render() {
     return (
       <Fragment>
-        <ArticleList/>
+        <RouteListPage/>
       </Fragment>
     );
   }

@@ -1,8 +1,18 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import {Link} from "react-router-dom";
 
-export default function(id) {
-    console.log(id);
+export default function(props) {
+    console.log(props, 333);
     return (
-        <h1>Articles { id.id } </h1>
+        <Fragment>
+            <h1>Article </h1>
+            <p>
+                {props.id}
+                text
+                rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+                rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+                rrrrrrrrrrr
+            </p>
+        </Fragment>
     )
 };
