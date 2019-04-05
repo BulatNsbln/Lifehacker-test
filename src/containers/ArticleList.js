@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
+import PropTypes from 'prop-types';
 
 class ArticleList extends Component {
+    static propTypes = {
+        articleList: PropTypes.array.isRequired
+    };
+
     render() {
         return(
             <ul>{this.body}</ul>
