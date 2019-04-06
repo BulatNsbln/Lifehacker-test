@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import api from '../middlewares/api';
-import reducer from '../reducers'
+import reducer from '../reducers';
 
 const enhancer = composeWithDevTools(
     applyMiddleware(api)
@@ -10,4 +10,5 @@ const enhancer = composeWithDevTools(
 
 const store = createStore(reducer, enhancer);
 
-export default store
+export default store;
+

@@ -3,9 +3,9 @@ import { Route, Redirect, Switch } from 'react-router-dom'
 import {connect} from "react-redux";
 import PropTypes from 'prop-types';
 
-import ArticleList from '../ArticleList';
-import ArticleContainer from '../ArticleContainer';
-import Loader from '../../components/Loader'
+import ArticleList from '../article-list';
+import ArticleContainer from '../article-container';
+import Loader from '../../components/loader'
 import { loadAllArticles } from '../../actions';
 
 

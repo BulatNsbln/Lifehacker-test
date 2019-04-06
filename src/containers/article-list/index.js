@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import PropTypes from 'prop-types';
 
-class ArticleList extends Component {
+import { List, Image, Title, Elem, Wrapper } from './style';
+
+class Index extends Component {
     static propTypes = {
         articleList: PropTypes.array.isRequired
     };
 
     render() {
         return(
-            <ul>{this.body}</ul>
+            <List>
+                {this.body}
+            </List>
         )
     };
 
@@ -19,14 +23,17 @@ class ArticleList extends Component {
 
         return articleList.map( article => {
             const id = article.id;
-
             return (
-                <li key = {id} >
-                    <img src={article.cat_cover.sizes.mobile} alt='лого' style={ { borderRadius: '50%', width: '100px', height: '100px' } } />
+                <Elem key = {id} >
                     <Link to={`/articles/${id}`} >
-                        { article.title.rendered }
+                        <Wrapper>
+                            <Image link = {article.cat_cover.sizes.mobile} />
+                            <Title>
+                                { article.title.rendered }
+                            </Title>
+                        </Wrapper>
                     </Link>
-                </li>
+                </Elem>
             )
         })
     };
@@ -40,6 +47,6 @@ function mapStateToProps(state) {
     return {
         articleList
     }
-}
+};
 
-export default connect( mapStateToProps )( ArticleList );
+export default connect( mapStateToProps )( Index );

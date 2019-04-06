@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import {connect} from "react-redux";
 import PropTypes from 'prop-types';
 
-import Article from '../components/Article';
-import Header from '../components/Header';
+import Article from '../../components/Article';
+import Header from '../../components/header';
+import { Wrapper } from "./styles";
 
 class ArticleContainer extends Component {
     static propTypes = {
@@ -22,12 +23,14 @@ class ArticleContainer extends Component {
         const title = article.title.rendered;
         const content = this.createMarkup(article.content.rendered);
 
-        return <div>
-            <Link to="/">
-                <Header/>
-            </Link>
-            <Article title = { title } content = { content } />
-        </div>
+        return (
+            <Wrapper>
+                <Link to="/">
+                    <Header/>
+                </Link>
+                <Article title = { title } content = { content } />
+            </Wrapper>
+        )
     }
 }
 
