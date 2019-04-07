@@ -32,6 +32,9 @@ export const Title = styled.h1`
   
   font-size: 24px;
   color: black;
+  @media(max-width: 1000px) {
+    font-size: 14px;
+  }
 `;
 
 export const Elem = styled.li`  
