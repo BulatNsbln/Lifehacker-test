@@ -6,9 +6,13 @@ export const List = styled.ul`
   margin: 0 auto;
   padding: 0 15px;
   width: 80%;
-  
+  min-width: 370px;
   background-color: #f5f5f5;
   list-style: none;
+  @media(max-width: 400px) {
+    padding: 0;
+    background-color: white;
+  }
 `;
 
 export const Image = styled.img`
@@ -32,19 +36,22 @@ export const Title = styled.h1`
   
   font-size: 24px;
   color: black;
-  @media(max-width: 1000px) {
+  @media(max-width: 650px) {
     font-size: 14px;
   }
 `;
 
 export const Elem = styled.li`  
   display: inline-block;
-  margin: 15px 15px;
+  margin: 15px;
   :hover {
     opacity: 0.6;
   }
   :active {
     opacity: 0.4;
+  }
+  @media(max-width: 400px) {
+    margin: 5px;
   }
 `;
 
