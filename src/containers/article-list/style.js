@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 0 15px;
   width: 80%;
@@ -34,7 +36,7 @@ export const Title = styled.h1`
 
 export const Elem = styled.li`  
   display: inline-block;
-  margin: 15px auto;
+  margin: 15px 15px;
   :hover {
     opacity: 0.6;
   }

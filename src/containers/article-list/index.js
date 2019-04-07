@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { List, Image, Title, Elem, Wrapper } from './style';
 
-class Index extends Component {
+export class ArticleList extends Component {
     static propTypes = {
         articleList: PropTypes.array.isRequired
     };
@@ -20,15 +20,14 @@ class Index extends Component {
 
     get body() {
         const { articleList } = this.props;
-
         return articleList.map( article => {
             const id = article.id;
             return (
-                <Elem key = {id} >
+                <Elem key = {id} className = 'test__body_li'>
                     <Link to={`/articles/${id}`} >
                         <Wrapper>
                             <Image link = {article.cat_cover.sizes.mobile} />
-                            <Title>
+                            <Title className = 'test__body_h1' >
                                 { article.title.rendered }
                             </Title>
                         </Wrapper>
@@ -49,4 +48,4 @@ function mapStateToProps(state) {
     }
 };
 
-export default connect( mapStateToProps )( Index );
+export default connect( mapStateToProps )( ArticleList );

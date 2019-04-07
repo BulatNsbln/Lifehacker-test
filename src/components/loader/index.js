@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Title } from './style';
 
-export default function () {
+export default () => {
     return (
         <Title>
             Загрузка ...

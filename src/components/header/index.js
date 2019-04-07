@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Wrapper } from './style';
 
-export default function () {
+export default  () => {
     return (
         <Wrapper>
             <svg  width="70" height="70" viewBox="0 0 24 24">

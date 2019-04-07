@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import {connect} from "react-redux";
 import PropTypes from 'prop-types';
 
-import Article from '../../components/Article';
+import Index from '../../components/article';
 import Header from '../../components/header';
 import { Wrapper } from "./styles";
+import NotFound from '../../components/notFound';
 
 class ArticleContainer extends Component {
     static propTypes = {
@@ -20,15 +21,18 @@ class ArticleContainer extends Component {
 
     render() {
         const { article } = this.props;
+        if(!article) return <NotFound/>;
         const title = article.title.rendered;
         const content = this.createMarkup(article.content.rendered);
+
+
 
         return (
             <Wrapper>
                 <Link to="/">
                     <Header/>
                 </Link>
-                <Article title = { title } content = { content } />
+                <Index title = { title } content = { content } />
             </Wrapper>
         )
     }
