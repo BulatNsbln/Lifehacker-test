@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Lifehacker-test/precache-manifest.9927ca155357eecf8cca0193cb4e67a4.js"
+  "/Lifehacker-test/precache-manifest.7a6a46646a1686fad32eefee4321df3a.js"
 );
 
 workbox.clientsClaim();

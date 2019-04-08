@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "140d1c48bd0e3514f8de",
-    "url": "/Lifehacker-test/static/js/main.d88cf253.chunk.js"
-  },
-  {
     "revision": "35e67aa45b36487467b6",
     "url": "/Lifehacker-test/static/js/runtime~main.4a90159e.js"
+  },
+  {
+    "revision": "140d1c48bd0e3514f8de",
+    "url": "/Lifehacker-test/static/js/main.d88cf253.chunk.js"
   },
   {
     "revision": "36f123ab35a7c25581c0",
