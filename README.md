@@ -1,4 +1,3 @@
-[DEMO](https://bulatnsbln.github.io/Lifehacker-test)
 
 Для запуска приложения локально нужно выполнить следующие команды:
 
@@ -19,9 +18,6 @@
 ### `npm run eject`
 
 ### `npm run deploy`
-
-Опубликует приложение на GitHub Pages. 
-Перед деплоем нужно изменить адрес в свойстве 'homepage' в файле package.json на ссылку в свой репозиторий.
 
 
 
