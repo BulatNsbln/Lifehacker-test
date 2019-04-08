@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import PropTypes from 'prop-types';
 
 import { List, Image, Title, Elem, Wrapper } from './style';
 
-export class ArticleList extends Component {
+export class ArticleList extends PureComponent {
     static propTypes = {
         articleList: PropTypes.array.isRequired
     };

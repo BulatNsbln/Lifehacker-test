@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from "react-redux";
 import PropTypes from 'prop-types';
@@ -8,14 +8,13 @@ import Header from '../../components/header';
 import { Wrapper } from "./styles";
 import NotFound from '../../components/notFound';
 
-class ArticleContainer extends Component {
+class ArticleContainer extends PureComponent {
     static propTypes = {
         id: PropTypes.string.isRequired,
         article: PropTypes.object.isRequired
     };
 
     createMarkup = (text) => {
-        // конвертирование текста в html
         return {__html: text };
     };
 
@@ -24,8 +23,6 @@ class ArticleContainer extends Component {
         if(!article) return <NotFound/>;
         const title = article.title.rendered;
         const content = this.createMarkup(article.content.rendered);
-
-
 
         return (
             <Wrapper>
@@ -43,7 +40,6 @@ export default connect(
         return {
             article: state.articles.articlesList[ownProps.id]
         }
-    },
-    null
+    }
 )(ArticleContainer);
 

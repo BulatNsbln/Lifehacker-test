@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom'
 import {connect} from "react-redux";
 import PropTypes from 'prop-types';
@@ -10,7 +10,7 @@ import NotFound from '../../components/notFound';
 import { loadAllArticles } from '../../actions';
 
 
-export class RouteListPage extends Component  {
+export class RouteListPage extends PureComponent  {
     static propTypes = {
         loaded: PropTypes.bool.isRequired,
         loadAllArticles: PropTypes.func.isRequired
