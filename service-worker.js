@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/BulatNsbln/Lifehacker-test/precache-manifest.d14fea0e44d7161a647d5efcf1c6fedf.js"
+  "/Lifehacker-test/precache-manifest.9927ca155357eecf8cca0193cb4e67a4.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/BulatNsbln/Lifehacker-test/index.html", {
+workbox.routing.registerNavigationRoute("/Lifehacker-test/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

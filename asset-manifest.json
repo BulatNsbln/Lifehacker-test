@@ -1,11 +1,11 @@
 {
-  "main.js": "/BulatNsbln/Lifehacker-test/static/js/main.e23000c9.chunk.js",
-  "main.js.map": "/BulatNsbln/Lifehacker-test/static/js/main.e23000c9.chunk.js.map",
-  "runtime~main.js": "/BulatNsbln/Lifehacker-test/static/js/runtime~main.771544e7.js",
-  "runtime~main.js.map": "/BulatNsbln/Lifehacker-test/static/js/runtime~main.771544e7.js.map",
-  "static/js/2.d3775382.chunk.js": "/BulatNsbln/Lifehacker-test/static/js/2.d3775382.chunk.js",
-  "static/js/2.d3775382.chunk.js.map": "/BulatNsbln/Lifehacker-test/static/js/2.d3775382.chunk.js.map",
-  "index.html": "/BulatNsbln/Lifehacker-test/index.html",
-  "precache-manifest.d14fea0e44d7161a647d5efcf1c6fedf.js": "/BulatNsbln/Lifehacker-test/precache-manifest.d14fea0e44d7161a647d5efcf1c6fedf.js",
-  "service-worker.js": "/BulatNsbln/Lifehacker-test/service-worker.js"
+  "main.js": "/Lifehacker-test/static/js/main.d88cf253.chunk.js",
+  "main.js.map": "/Lifehacker-test/static/js/main.d88cf253.chunk.js.map",
+  "runtime~main.js": "/Lifehacker-test/static/js/runtime~main.4a90159e.js",
+  "runtime~main.js.map": "/Lifehacker-test/static/js/runtime~main.4a90159e.js.map",
+  "static/js/2.41196a18.chunk.js": "/Lifehacker-test/static/js/2.41196a18.chunk.js",
+  "static/js/2.41196a18.chunk.js.map": "/Lifehacker-test/static/js/2.41196a18.chunk.js.map",
+  "index.html": "/Lifehacker-test/index.html",
+  "precache-manifest.9927ca155357eecf8cca0193cb4e67a4.js": "/Lifehacker-test/precache-manifest.9927ca155357eecf8cca0193cb4e67a4.js",
+  "service-worker.js": "/Lifehacker-test/service-worker.js"
 }
