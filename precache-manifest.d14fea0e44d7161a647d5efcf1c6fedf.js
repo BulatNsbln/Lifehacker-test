@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "6bcf4ba045c8a53d7684",
-    "url": "/BulatNsbln/Lifehacker-test/static/js/main.d7e92bb4.chunk.js"
+    "revision": "3f745760cddbe76e301d",
+    "url": "/BulatNsbln/Lifehacker-test/static/js/main.e23000c9.chunk.js"
   },
   {
     "revision": "d9db5ba6665fb5e7d128",
@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/BulatNsbln/Lifehacker-test/static/js/2.d3775382.chunk.js"
   },
   {
-    "revision": "aad93aa6aeccec5ff941c3eb3f6bd5ca",
+    "revision": "4230af3f295eb7d6400ddd069d368ee9",
     "url": "/BulatNsbln/Lifehacker-test/index.html"
   }
 ];
