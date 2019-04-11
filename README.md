@@ -1,5 +1,3 @@
-[DEMO](http://www.s183314.smrtp.ru/#/articles)
-
 Для запуска приложения локально нужно выполнить следующие команды:
 
 1. ### `git clone https://github.com/BulatNsbln/Lifehacker-test.git`
